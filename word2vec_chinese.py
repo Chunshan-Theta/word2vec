@@ -253,6 +253,21 @@ try:
     font = FontProperties(fname=r"./simsun.ttc", size=14)
     
     tsne = TSNE(perplexity=30, n_components=2, init='pca', n_iter=5000)
+    #perplexity: 
+    #   float, optional (default: 30)
+    #   The perplexity is related to the number of nearest neighbors that is used in other manifold learning algorithms. Larger datasets usually require a larger perplexity. Consider selecting a value between 5 and 50. The choice is not extremely critical since t-SNE is quite insensitive to this parameter.
+    
+    #n_components : 
+    #   int, optional (default: 2)
+    #   Dimension of the embedded space.
+
+    #init: 
+    #   Initialization of embedding. Possible options are ‘random’, ‘pca’, and a numpy array of shape (n_samples, n_components). PCA initialization cannot be used with precomputed distances and is usually more globally stable than random initialization.
+    
+    #n_iter : 
+    #   int, optional (default: 1000)
+    #   Maximum number of iterations for the optimization. Should be at least 250.
+
     plot_only = 500
     show_detail("final_embeddings",final_embeddings)
     final_embeddings_batch = final_embeddings[:plot_only, :]
